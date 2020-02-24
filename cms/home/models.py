@@ -4,7 +4,7 @@ from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
 
 
-class TestPage(Page):
+class HomePage(Page):
     body = RichTextField(blank=True, max_length=254)
 
     content_panels = Page.content_panels + [
