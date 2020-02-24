@@ -1,0 +1,34 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{ts,js,py}]
+quote_type = single
+
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+[pep8]
+# ignore = E226,E302,E41
+max-line-length = 120
+indent-size = 2
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+[{package.json,.gitlab-ci.yml, docker-compose*.yml}]
+indent_style = space
+indent_size = 2

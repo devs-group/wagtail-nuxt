@@ -1,0 +1,76 @@
+image: docker:git
+services:
+  - docker:dind
+
+cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
+  paths:
+    - cms/dashboard/static/
+
+stages:
+  - build
+  - deploy
+  - notify
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+
+variables:
+  GITLAB_REGISTRY: registry.gitlab.com
+  SERVER_SSH_ADDRESS: devsgroup@2.56.99.181
+  CONTAINER_PATH_FRONTEND: $GITLAB_REGISTRY/$CI_PROJECT_PATH/frontend:$CI_BUILD_REF_NAME
+  CONTAINER_PATH_CMS: $GITLAB_REGISTRY/$CI_PROJECT_PATH/cms:$CI_BUILD_REF_NAME
+  SLACK_WEBHOOK: https://hooks.slack.com/services/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
+  DOCKER_DRIVER: overlay
+
+build_cms:
+  stage: build
+  script:
+    - docker build -t $CONTAINER_PATH_CMS ./cms
+    - docker push $CONTAINER_PATH_CMS
+  only:
+    refs:
+      - master
+
+build_frontend:
+  stage: build
+  script:
+    - docker build -t $CONTAINER_PATH_FRONTEND ./frontend
+    - docker push $CONTAINER_PATH_FRONTEND
+  only:
+    refs:
+      - master
+
+deploy:
+  stage: deploy
+  environment:
+    name: live
+    url: https://youmezurich.devs-group.de
+  before_script:
+    - apk add sshpass
+    - apk add rsync
+    - apk add openssl
+  script:
+    - sh ./.deploy/start.sh
+  only:
+    refs:
+      - master
+
+notify_slack_failure:
+  stage: notify
+  script:
+    - docker run -e SLACK_WEBHOOK=$SLACK_WEBHOOK -e SLACK_MESSAGE="🚀 youmezurich could not be deployed! 😡" -e SLACK_CHANNEL="allgemein" technosophos/slack-notify
+  when: on_failure
+  only:
+    refs:
+      - master
+
+notify_slack_success:
+  stage: notify
+  script:
+    - docker run -e SLACK_WEBHOOK=$SLACK_WEBHOOK -e SLACK_MESSAGE="🚀 youmezurich has been successfully deployed! 🙌" -e SLACK_CHANNEL="allgemein" technosophos/slack-notify
+  when: on_success
+  only:
+    refs:
+      - master

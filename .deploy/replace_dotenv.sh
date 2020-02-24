@@ -1,0 +1,21 @@
+ENVIRONMENT=production
+NODE_ENV=production
+DJANGO_SECRET_KEY=$(openssl rand -base64 32)
+POSTGRES_USER=$(openssl rand -base64 8)
+POSTGRES_PASSWORD=$(openssl rand -base64 16)
+MINIO_ACCESS_KEY=$(openssl rand -base64 10)
+MINIO_SECRET_KEY=$(openssl rand -base64 16)
+MINIO_BROWSER="off"
+MINIO_ENDPOINT="media.youmezurich.devs-group.de"
+PGADMIN_DEFAULT_PASSWORD=$(openssl rand -base64 16)
+
+sed -E -i "s|(ENVIRONMENT=).+|\1${ENVIRONMENT}|" $ENV_PATH
+sed -E -i "s|(NODE_ENV=).+|\1${NODE_ENV}|" $ENV_PATH
+sed -E -i "s|(DJANGO_SECRET_KEY=).+|\1${DJANGO_SECRET_KEY}|" $ENV_PATH
+sed -E -i "s|(POSTGRES_USER=).+|\1${POSTGRES_USER}|" $ENV_PATH
+sed -E -i "s|(POSTGRES_PASSWORD=).+|\1${POSTGRES_PASSWORD}|" $ENV_PATH
+sed -E -i "s|(MINIO_ACCESS_KEY=).+|\1${MINIO_ACCESS_KEY}|" $ENV_PATH
+sed -E -i "s|(MINIO_SECRET_KEY=).+|\1${MINIO_SECRET_KEY}|" $ENV_PATH
+sed -E -i "s|(MINIO_BROWSER=).+|\1${MINIO_BROWSER}|" $ENV_PATH
+sed -E -i "s|(MINIO_ENDPOINT=).+|\1${MINIO_ENDPOINT}|" $ENV_PATH
+sed -E -i "s|(PGADMIN_DEFAULT_PASSWORD=).+|\1${PGADMIN_DEFAULT_PASSWORD}|" $ENV_PATH

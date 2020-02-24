@@ -1,0 +1,8 @@
+**/**/node_modules
+**/**/__pycache__
+misc/
+website/media/
+**/**/.DS_Store
+.env
+.vscode/
+.idea/

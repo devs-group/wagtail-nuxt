@@ -1,0 +1,89 @@
+version: "3"
+
+volumes:
+  db:
+  pgadmin:
+  minio-data:
+
+networks:
+  web:
+    external: true
+  default:
+    driver: bridge
+    external: false
+
+services:
+  web_frontend:
+    restart: always
+    env_file: .env
+    image: registry.gitlab.com/devs-group/COOKIECUTTER_PLACEHOLDER_PROJECTNAME/web_frontend:master
+    ports:
+      - 3000
+    depends_on:
+      - cms
+    links:
+      - cms
+    networks:
+      - web
+      - default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-web-frontend.rule=Host(`$TRAEFIK_HOST_FRONTEND`)"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-web-frontend.entrypoints=https"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-web-frontend.tls=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-web-frontend.tls.certresolver=le"
+      - "traefik.http.services.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-web-frontend.loadbalancer.server.port=3000"
+
+  cms:
+    restart: always
+    env_file: .env
+    image: registry.gitlab.com/devs-group/COOKIECUTTER_PLACEHOLDER_PROJECTNAME/cms:master
+    volumes:
+      - ./:/app/media/
+    ports:
+      - 8000
+    depends_on:
+      - postgres
+      - minio
+    links:
+      - postgres
+      - minio
+    networks:
+      - web
+      - default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-cms.rule=Host(`$TRAEFIK_HOST_CMS`)"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-cms.entrypoints=https"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-cms.tls=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-cms.tls.certresolver=le"
+      - "traefik.http.services.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-cms.loadbalancer.server.port=8000"
+
+  postgres:
+    image: postgres:9.6
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - default
+    env_file: .env
+
+  minio:
+    image: minio/minio:RELEASE.2020-02-07T04-56-50Z
+    restart: always
+    env_file: .env
+    networks:
+      - web
+      - default
+    volumes:
+      - minio-data:/data
+    ports:
+      - 9000
+    command: server /data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-storage.rule=Host(`media.$TRAEFIK_HOST`)"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-storage.entrypoints=https"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-storage.tls=true"
+      - "traefik.http.routers.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-storage.tls.certresolver=le"
+      - "traefik.http.services.COOKIECUTTER_PLACEHOLDER_PROJECTNAME-storage.loadbalancer.server.port=9000"
