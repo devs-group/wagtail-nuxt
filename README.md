@@ -1,80 +1,110 @@
 
 # Table of Contents
 
-1.  [Setup - Local](#orgf55167d)
-2.  [Endpoints](#org37815f0)
-    1.  [GraphQl - GraphiQl](#org177d42e)
-    2.  [Backend - Admin](#org1a4a842)
-    3.  [Frontend - Nuxt](#org04cc71e)
-    4.  [Static Files - MinIO](#orgf35284a)
-    5.  [DB - Pgadmin](#orgc849483)
-3.  [Traefik](#org703efef)
-4.  [Credentials](#org930bc99)
-    1.  [DB - Postgre](#org740b236)
-    2.  [DB - Pgadmin](#org1c1cc7f)
-    3.  [Backend - Admin](#org283983f)
-    4.  [Static Files - MinIO](#orga0dce3c)
+1.  [Setup - Local](#org64bf3b0)
+2.  [Endpoints](#orgbccf9d1)
+    1.  [GraphQl - GraphiQl](#org226cdc0)
+    2.  [Backend - Admin](#org26d6774)
+    3.  [Frontend - Nuxt](#org3864aee)
+    4.  [Static Files - MinIO](#org07cfddc)
+    5.  [DB - Pgadmin](#org11a913a)
+3.  [Traefik](#orge395a68)
+4.  [Credentials](#org2e7fdfa)
+    1.  [Overview](#org986e3df)
+    2.  [DB - Postgre](#org7f6eafb)
+    3.  [DB - Pgadmin](#org3d920da)
+    4.  [Backend - Admin](#org1b7f25e)
+    5.  [Static Files - MinIO](#org8b7ab71)
 
 
-<a id="orgf55167d"></a>
+<a id="org64bf3b0"></a>
 
 # Setup - Local
 
 1.  Copy [.env.dist](.env.dist) to [.env](.env)
 
 
-<a id="org37815f0"></a>
+<a id="orgbccf9d1"></a>
 
 # Endpoints
 
 
-<a id="org177d42e"></a>
+<a id="org226cdc0"></a>
 
 ## GraphQl - GraphiQl
 
 <http:localhost:8000/api/graphiql>
 
 
-<a id="org1a4a842"></a>
+<a id="org26d6774"></a>
 
 ## Backend - Admin
 
 <http:localhost:8000/admin>
 
 
-<a id="org04cc71e"></a>
+<a id="org3864aee"></a>
 
 ## Frontend - Nuxt
 
 <http:localhost:3000>
 
 
-<a id="orgf35284a"></a>
+<a id="org07cfddc"></a>
 
 ## Static Files - MinIO
 
 <http:127.0.0.1:9000>
 
 
-<a id="orgc849483"></a>
+<a id="org11a913a"></a>
 
 ## DB - Pgadmin
 
 <http:localhost:5050>
 
 
-<a id="org703efef"></a>
+<a id="orge395a68"></a>
 
 # Traefik
 
--   host: base-wagtail.devs-group.de
--   cms-host: cms.base-wagtail.devs-group.de
--   frontend: base-wagtail.devs-group.de
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="org930bc99"></a>
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">host</td>
+<td class="org-left">base-wagtail.devs-group.de</td>
+</tr>
+
+
+<tr>
+<td class="org-left">cms-host</td>
+<td class="org-left">cms.base-wagtail.devs-group.de</td>
+</tr>
+
+
+<tr>
+<td class="org-left">frontend</td>
+<td class="org-left">base-wagtail.devs-group.de</td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="org2e7fdfa"></a>
 
 # Credentials
+
+
+<a id="org986e3df"></a>
+
+## Overview
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -121,35 +151,116 @@
 </table>
 
 
-<a id="org740b236"></a>
+<a id="org7f6eafb"></a>
 
 ## DB - Postgre
 
--   database: cms
--   user: root
--   password: root
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="org1c1cc7f"></a>
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">database</td>
+<td class="org-left">cms</td>
+</tr>
+
+
+<tr>
+<td class="org-left">user</td>
+<td class="org-left">root</td>
+</tr>
+
+
+<tr>
+<td class="org-left">password</td>
+<td class="org-left">root</td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="org3d920da"></a>
 
 ## DB - Pgadmin
 
--   email: info@devs-group.com
--   password: root
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="org283983f"></a>
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">email</td>
+<td class="org-left">info@devs-group.com</td>
+</tr>
+
+
+<tr>
+<td class="org-left">password</td>
+<td class="org-left">root</td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="org1b7f25e"></a>
 
 ## Backend - Admin
 
--   user: Admin
--   password: Admin123
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="orga0dce3c"></a>
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">user</td>
+<td class="org-left">Admin</td>
+</tr>
+
+
+<tr>
+<td class="org-left">password</td>
+<td class="org-left">Admin123</td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="org8b7ab71"></a>
 
 ## Static Files - MinIO
 
--   access-key: root
--   secret-key: root1234
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">access-key</td>
+<td class="org-left">root</td>
+</tr>
+
+
+<tr>
+<td class="org-left">secret-key</td>
+<td class="org-left">root1234</td>
+</tr>
+</tbody>
+</table>
 
