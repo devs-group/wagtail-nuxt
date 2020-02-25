@@ -29,9 +29,16 @@ function createSuperuser () {
     python manage.py create_superuser $username $password
 }
 
+function syncPageTranslationFields () {
+  echo "Syncing page translation fields..."
+  python manage.py sync_page_translation_fields
+}
+
 
 waitForPostgres
 migrateTables
+# COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
+syncPageTranslationFields
 loadStatics
 if [[ ${ENVIRONMENT} != "production" ]]; then
     createSuperuser "admin" "admin123"

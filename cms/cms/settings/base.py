@@ -27,6 +27,11 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 INSTALLED_APPS = [
 
+    # COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
+    'wagtail_modeltranslation',
+    'wagtail_modeltranslation.makemigrations',
+    'wagtail_modeltranslation.migrate',
+
     'home',
     'search',
     'api',
@@ -62,11 +67,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
-    # 'wagtail_modeltranslation',
-    # 'wagtail_modeltranslation.makemigrations',
-    # 'wagtail_modeltranslation.migrate',
 ]
 
 MIDDLEWARE = [
