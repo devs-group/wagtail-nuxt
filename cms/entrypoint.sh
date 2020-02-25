@@ -36,7 +36,7 @@ loadStatics
 if [[ ${ENVIRONMENT} != "production" ]]; then
     createSuperuser "admin" "admin123"
     loadFixtures
-    gunicorn --bind 0.0.0.0:8000 --reload --workers 3 --worker-class gevent --access-logfile - home.wsgi:application
+    gunicorn --bind 0.0.0.0:8000 --reload --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
 else
-    gunicorn --bind 0.0.0.0:8000 --workers 3 --worker-class gevent --access-logfile - home.wsgi:application
+    gunicorn --bind 0.0.0.0:8000 --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
 fi
