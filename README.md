@@ -1,18 +1,23 @@
 
 # Table of Contents
 
-1.  [Local Setup](#org82a8a3c)
-    1.  [Endpoints](#org9252b1b)
-    2.  [Credentials](#org4b9c3fd)
-        1.  [DB - Postgre](#org0deb995)
-        2.  [DB - Pgadmin](#orgacc1a99)
-        3.  [Backend - Admin](#org2b4bbfa)
-        4.  [Static Files - MinIO](#org595f708)
-2.  [Traefik](#orgd9a3a7d)
+1.  [Local Setup](#orgf67e601)
+    1.  [Endpoints](#orgbafda0f)
+        1.  [Frontend - Nuxt](#orgb652995)
+        2.  [Backend - Admin](#org86f9a4b)
+        3.  [GraphQL - GraphiQL](#orgf16ebc8)
+        4.  [Static Files - MinIO](#orgc5ea081)
+        5.  [DB - Pgadmin](#org76c5504)
+    2.  [Credentials](#org7542166)
+        1.  [DB - Postgre](#org5660282)
+        2.  [DB - Pgadmin](#orgf22fb3a)
+        3.  [Backend - Admin](#org6527aaf)
+        4.  [Static Files - MinIO](#org191faa8)
+2.  [Traefik](#org714c97f)
 
 
 
-<a id="org82a8a3c"></a>
+<a id="orgf67e601"></a>
 
 # Local Setup
 
@@ -22,69 +27,66 @@ Follow these steps to set everything up locally on your machine
     
         git clone https://gitlab.com/devs-group/base-wagtail.git && cd base-wagtail
 
-2.  Start Containers with docker-compose
+2.  Copy [.env.dist](.env.dist) to .env
+    
+        cp .env.dist .env
+
+3.  Start Containers with docker-compose
     
         docker-compose up -d
 
-3.  Copy [.env.dist](.env.dist) to .env
 
-
-<a id="org9252b1b"></a>
+<a id="orgbafda0f"></a>
 
 ## Endpoints
 
 As soon as everything is up and running visit these addresses to interact with
-the provided APIs, where necessary use [Credentials](#org4b9c3fd).
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+the provided APIs, where necessary use [Credentials](#org7542166).
 
 
-<colgroup>
-<col  class="org-left" />
+<a id="orgb652995"></a>
 
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">Frontend - Nuxt</td>
-<td class="org-left"><http:localhost:3000></td>
-</tr>
+### Frontend - Nuxt
+
+<http:localhost:3000>
 
 
-<tr>
-<td class="org-left">Backend - Admin</td>
-<td class="org-left"><http:localhost:8000/admin></td>
-</tr>
+<a id="org86f9a4b"></a>
+
+### Backend - Admin
+
+<http:localhost:8000/admin>
 
 
-<tr>
-<td class="org-left">GraphQL - GraphiQL</td>
-<td class="org-left"><http:localhost:8000/api/graphiql></td>
-</tr>
+<a id="orgf16ebc8"></a>
+
+### GraphQL - GraphiQL
+
+<http:localhost:8000/api/graphiql>
 
 
-<tr>
-<td class="org-left">Static Files - MinIO</td>
-<td class="org-left"><http:localhost:9000></td>
-</tr>
+<a id="orgc5ea081"></a>
+
+### Static Files - MinIO
+
+<http:localhost:9000>
 
 
-<tr>
-<td class="org-left">DB - Pgadmin</td>
-<td class="org-left"><http:localhost:5050></td>
-</tr>
-</tbody>
-</table>
+<a id="org76c5504"></a>
+
+### DB - Pgadmin
+
+<http:localhost:5050>
 
 
-<a id="org4b9c3fd"></a>
+<a id="org7542166"></a>
 
 ## Credentials
 
 Credentials for the dev setup containing only insensitive test data.
 
 
-<a id="org0deb995"></a>
+<a id="org5660282"></a>
 
 ### DB - Postgre
 
@@ -117,7 +119,7 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="orgacc1a99"></a>
+<a id="orgf22fb3a"></a>
 
 ### DB - Pgadmin
 
@@ -144,7 +146,7 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="org2b4bbfa"></a>
+<a id="org6527aaf"></a>
 
 ### Backend - Admin
 
@@ -171,7 +173,7 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="org595f708"></a>
+<a id="org191faa8"></a>
 
 ### Static Files - MinIO
 
@@ -198,11 +200,11 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="orgd9a3a7d"></a>
+<a id="org714c97f"></a>
 
 # Traefik
 
-The subdomains where to find the
+Subdomains for the
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
