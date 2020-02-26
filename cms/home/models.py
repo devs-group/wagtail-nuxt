@@ -1,17 +1,13 @@
-from django.http import HttpResponseRedirect
-from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
-from wagtail.core.fields import RichTextField
+from django.db import models
+
 from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField
+from wagtail.admin.edit_handlers import FieldPanel
 
 
-class TestPage(Page):
-    body = RichTextField(blank=True, max_length=254)
+class HomePage(Page):
+    body = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
-        MultiFieldPanel([
-            FieldPanel('body', classname="full")
-        ], heading="COOKIECUTTER_PLACEHOLDER_WELCOME_TXT")
+        FieldPanel('body', classname="full"),
     ]
-
-    def serve(self, request, *args, **kwargs):
-        return HttpResponseRedirect('/admin/')

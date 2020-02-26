@@ -1,7 +1,7 @@
 **/**/node_modules
 **/**/__pycache__
 misc/
-home/media/
+cms/media/
 **/**/.DS_Store
 .env
 .vscode/

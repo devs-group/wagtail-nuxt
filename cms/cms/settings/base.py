@@ -26,9 +26,18 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
 
-    'dashboard',                # must be before wagtailadmin
+    # COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
+    'wagtail_modeltranslation',
+    'wagtail_modeltranslation.makemigrations',
+    'wagtail_modeltranslation.migrate',
+
+    'home',
+    'search',
+    'api',
+    'dashboard',
+
+    'corsheaders',
 
     'wagtail.api.v2',
     'wagtail.contrib.forms',
@@ -58,16 +67,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
-    # 'wagtail_modeltranslation',
-    # 'wagtail_modeltranslation.makemigrations',
-    # 'wagtail_modeltranslation.migrate',
-
-    'home',
-    'search',
-    'api',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +86,7 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
-ROOT_URLCONF = 'home.urls'
+ROOT_URLCONF = 'cms.urls'
 
 TEMPLATES = [
     {
@@ -118,7 +117,7 @@ GRAPHQL_API = {
     ]
 }
 
-WSGI_APPLICATION = 'home.wsgi.application'
+WSGI_APPLICATION = 'cms.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -193,7 +192,7 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "home"
+WAGTAIL_SITE_NAME = "cms"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash

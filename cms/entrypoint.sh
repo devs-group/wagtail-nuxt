@@ -29,14 +29,21 @@ function createSuperuser () {
     python manage.py create_superuser $username $password
 }
 
+function syncPageTranslationFields () {
+  echo "Syncing page translation fields..."
+  python manage.py sync_page_translation_fields
+}
+
 
 waitForPostgres
 migrateTables
+# COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
+syncPageTranslationFields
 loadStatics
 if [[ ${ENVIRONMENT} != "production" ]]; then
     createSuperuser "admin" "admin123"
     loadFixtures
-    gunicorn --bind 0.0.0.0:8000 --reload --workers 3 --worker-class gevent --access-logfile - home.wsgi:application
+    gunicorn --bind 0.0.0.0:8000 --reload --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
 else
-    gunicorn --bind 0.0.0.0:8000 --workers 3 --worker-class gevent --access-logfile - home.wsgi:application
+    gunicorn --bind 0.0.0.0:8000 --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
 fi
