@@ -1,25 +1,20 @@
 
 # Table of Contents
 
-1.  [Setup - Local](#orgd1daac8)
-2.  [Endpoints - Local](#org5b75216)
-    1.  [Frontend - Nuxt](#org4eebcf3)
-    2.  [Backend - Admin](#org75246ad)
-    3.  [GraphQL - GraphiQL](#orge439014)
-    4.  [Static Files - MinIO](#orgf242aac)
-    5.  [DB - Pgadmin](#org3dbd061)
-3.  [Credentials](#org7322316)
-    1.  [DB - Postgre](#org662991c)
-    2.  [DB - Pgadmin](#orgb518a83)
-    3.  [Backend - Admin](#orgb939310)
-    4.  [Static Files - MinIO](#org83b538f)
-4.  [Traefik](#org530c6c9)
+1.  [Local Setup](#org82a8a3c)
+    1.  [Endpoints](#org9252b1b)
+    2.  [Credentials](#org4b9c3fd)
+        1.  [DB - Postgre](#org0deb995)
+        2.  [DB - Pgadmin](#orgacc1a99)
+        3.  [Backend - Admin](#org2b4bbfa)
+        4.  [Static Files - MinIO](#org595f708)
+2.  [Traefik](#orgd9a3a7d)
 
 
 
-<a id="orgd1daac8"></a>
+<a id="org82a8a3c"></a>
 
-# Setup - Local
+# Local Setup
 
 Follow these steps to set everything up locally on your machine
 
@@ -34,59 +29,64 @@ Follow these steps to set everything up locally on your machine
 3.  Copy [.env.dist](.env.dist) to .env
 
 
-<a id="org5b75216"></a>
+<a id="org9252b1b"></a>
 
-# Endpoints - Local
+## Endpoints
 
 As soon as everything is up and running visit these addresses to interact with
-the provided APIs, where necessary use [Credentials](#org7322316).
+the provided APIs, where necessary use [Credentials](#org4b9c3fd).
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-<a id="org4eebcf3"></a>
+<colgroup>
+<col  class="org-left" />
 
-## Frontend - Nuxt
-
-<http:localhost:3000>
-
-
-<a id="org75246ad"></a>
-
-## Backend - Admin
-
-<http:localhost:8000/admin>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Frontend - Nuxt</td>
+<td class="org-left"><http:localhost:3000></td>
+</tr>
 
 
-<a id="orge439014"></a>
-
-## GraphQL - GraphiQL
-
-<http:localhost:8000/api/graphiql>
-
-
-<a id="orgf242aac"></a>
-
-## Static Files - MinIO
-
-<http:localhost:9000>
+<tr>
+<td class="org-left">Backend - Admin</td>
+<td class="org-left"><http:localhost:8000/admin></td>
+</tr>
 
 
-<a id="org3dbd061"></a>
+<tr>
+<td class="org-left">GraphQL - GraphiQL</td>
+<td class="org-left"><http:localhost:8000/api/graphiql></td>
+</tr>
 
-## DB - Pgadmin
 
-<http:localhost:5050>
+<tr>
+<td class="org-left">Static Files - MinIO</td>
+<td class="org-left"><http:localhost:9000></td>
+</tr>
 
 
-<a id="org7322316"></a>
+<tr>
+<td class="org-left">DB - Pgadmin</td>
+<td class="org-left"><http:localhost:5050></td>
+</tr>
+</tbody>
+</table>
 
-# Credentials
+
+<a id="org4b9c3fd"></a>
+
+## Credentials
 
 Credentials for the dev setup containing only insensitive test data.
 
 
-<a id="org662991c"></a>
+<a id="org0deb995"></a>
 
-## DB - Postgre
+### DB - Postgre
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -117,9 +117,9 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="orgb518a83"></a>
+<a id="orgacc1a99"></a>
 
-## DB - Pgadmin
+### DB - Pgadmin
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -144,9 +144,9 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="orgb939310"></a>
+<a id="org2b4bbfa"></a>
 
-## Backend - Admin
+### Backend - Admin
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -171,9 +171,9 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="org83b538f"></a>
+<a id="org595f708"></a>
 
-## Static Files - MinIO
+### Static Files - MinIO
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -198,9 +198,11 @@ Credentials for the dev setup containing only insensitive test data.
 </table>
 
 
-<a id="org530c6c9"></a>
+<a id="orgd9a3a7d"></a>
 
 # Traefik
+
+The subdomains where to find the
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
