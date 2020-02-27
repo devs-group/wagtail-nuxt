@@ -9,7 +9,7 @@ export default {
    */
   head() {
     return {
-      title: 'YouMeZurich',
+      title: 'COOKIECUTTER_PLACEHOLDER_PROJECTNAME',
       htmlAttrs: {
         lang: this.$i18n.locale || this.$i18n.fallbackLocale
       },

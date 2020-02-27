@@ -1,3 +1,4 @@
+// COOKIECUTTER_PLACEHOLDER_TRANSLATION
 export const state = () => ({
   locales: ['en', 'de'],
   locale: 'en'
