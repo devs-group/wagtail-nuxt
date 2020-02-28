@@ -1,9 +1,19 @@
 <template>
-  <div>{{ homePage.body }}</div>
+  <div>
+    <span v-html="homePage.body"></span>
+    <ul>
+      <li v-for="infoCard in infoCards" :key="infoCard.id">
+        <nuxt-link :to="localePath(`/entry/${infoCard.id}`)">{{
+          infoCard.title
+        }}</nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
+// import InfoCard from '@/components/InfoCard'
 
 export default {
   components: {},
@@ -21,9 +31,21 @@ export default {
         }
       `
     })
+    const infoCardResponse = await client.query({
+      query: gql`
+        query getInfoCards {
+          infoCards {
+            id
+            title
+          }
+        }
+      `
+    })
     const homePageData = await homePageResponse.data
+    const infoCardData = await infoCardResponse.data
     return {
-      ...homePageData
+      ...homePageData,
+      ...infoCardData
     }
   }
 }

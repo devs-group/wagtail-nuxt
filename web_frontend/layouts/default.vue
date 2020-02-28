@@ -1,12 +1,9 @@
 <template>
   <div>
-    <h1>Hello Word!</h1>
+    <nuxt />
   </div>
 </template>
 <script>
-// import TopBar from '@/components/TopBar'
-// import { pageTitle } from '@/utils'
-
 export default {
   head() {
     return {
