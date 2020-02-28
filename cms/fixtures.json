@@ -153,6 +153,90 @@
   }
 },
 {
+  "model": "wagtailcore.pagerevision",
+  "pk": 3,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:37:15.489Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-27T15:22:29.955Z\", \"latest_revision_created_at\": \"2020-02-27T15:22:29.930Z\", \"live_revision\": 2, \"body\": \"<h2>Infocards</h2>\", \"body_de\": \"<h2>Infocards</h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 4,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:38:24.358Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-27T15:22:29.955Z\", \"latest_revision_created_at\": \"2020-02-27T15:22:29.930Z\", \"live_revision\": 2, \"body\": \"<h2>Infocards</h2>\", \"body_de\": \"<h2>Infocards</h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 5,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:38:46.345Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-27T15:22:29.955Z\", \"latest_revision_created_at\": \"2020-02-28T12:38:24.358Z\", \"live_revision\": 2, \"body\": \"<h2>Infocards</h2>\", \"body_de\": \"<h2>Infocards</h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 6,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:39:12.456Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-28T12:38:46.370Z\", \"latest_revision_created_at\": \"2020-02-28T12:38:46.345Z\", \"live_revision\": 5, \"body\": \"<h2><b>Click me</b></h2>\", \"body_de\": \"<h2><b>Click me</b></h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 7,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:39:19.853Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-28T12:39:12.489Z\", \"latest_revision_created_at\": \"2020-02-28T12:39:12.456Z\", \"live_revision\": 6, \"body\": \"<h2><b>Click me:</b></h2>\", \"body_de\": \"<h2><b>Click me:</b></h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 8,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-02-28T12:39:35.881Z",
+    "user": [
+      "admin"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 0, \"title\": \"HomePage\", \"title_de\": \"HomePage\", \"title_en\": null, \"draft_title\": \"HomePage\", \"slug\": \"home-page\", \"slug_de\": \"home-page\", \"slug_en\": null, \"content_type\": 34, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"home-page/\", \"url_path_de\": \"home-page/\", \"url_path_en\": \"home-page/\", \"owner\": null, \"seo_title\": \"\", \"seo_title_de\": null, \"seo_title_en\": null, \"show_in_menus\": false, \"search_description\": \"\", \"search_description_de\": \"\", \"search_description_en\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2020-02-27T15:17:43.167Z\", \"last_published_at\": \"2020-02-28T12:39:19.879Z\", \"latest_revision_created_at\": \"2020-02-28T12:39:19.853Z\", \"live_revision\": 7, \"body\": \"<h2><b>Click to show infocard:</b></h2>\", \"body_de\": \"<h2><b>Click to show infocard:</b></h2>\", \"body_en\": \"\"}",
+    "approved_go_live_at": null
+  }
+},
+{
   "model": "wagtailcore.page",
   "pk": 1,
   "fields": {
@@ -229,9 +313,9 @@
     "expired": false,
     "locked": false,
     "first_published_at": "2020-02-27T15:17:43.167Z",
-    "last_published_at": "2020-02-27T15:22:29.955Z",
-    "latest_revision_created_at": "2020-02-27T15:22:29.930Z",
-    "live_revision": 2
+    "last_published_at": "2020-02-28T12:39:35.911Z",
+    "latest_revision_created_at": "2020-02-28T12:39:35.881Z",
+    "live_revision": 8
   }
 },
 {
@@ -274,8 +358,8 @@
   "model": "home.homepage",
   "pk": 3,
   "fields": {
-    "body": "<p>Test <i>this</i> <b>shit</b></p>",
-    "body_de": "<p>Test <i>this</i> <b>shit</b></p>",
+    "body": "<h2><b>Click to show infocard:</b></h2>",
+    "body_de": "<h2><b>Click to show infocard:</b></h2>",
     "body_en": ""
   }
 }
