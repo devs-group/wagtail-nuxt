@@ -78,7 +78,7 @@ export default {
     '@nuxtjs/dotenv',
     // Docs: https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
-    ['vue-scrollto/nuxt', { duration: 300 }],
+    ['vue-scrollto/nuxt', { duration: 300 }]
   ],
   /*
    ** Axios module configuration
