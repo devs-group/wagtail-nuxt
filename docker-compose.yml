@@ -56,19 +56,6 @@ services:
       - default
     env_file: .env
 
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    env_file: .env
-    volumes:
-      - pgadmin:/var/lib/pgadmin
-      - pgadmin:/pgadmin4/servers.json
-    networks:
-      - default
-    ports:
-      - "5050:5050"
-    links:
-      - postgres
-
   minio:
     image: minio/minio:RELEASE.2020-02-07T04-56-50Z
     env_file: .env

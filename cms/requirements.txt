@@ -1,21 +1,17 @@
 Django>=2.2,<2.3
-wagtail>=2.7,<2.8
+wagtail>=2.9,<3.0
 gunicorn==19.9.0
 gevent==1.4.0
 ipython==7.12.0
+django-debug-toolbar
+
 
 # Storage
 psycopg2==2.8.3
 wagtailmenus>=3.0
-django-debug-toolbar
 django-minio-storage==0.3.5
 
 # API
 wagtail-graphql
 graphene-django
 django-cors-headers
-
-
-#i18n
-# # COOKIECUTTER_PLACEHOLDER_TRANSLATIONS
-wagtail-modeltranslation

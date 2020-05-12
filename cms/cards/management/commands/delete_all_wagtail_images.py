@@ -17,10 +17,6 @@ class Command(BaseCommand):
             return self.yes_or_no("Invalid input: %s" % (question))
 
     def handle(self, *args, **options):
-        if os.environ.get('ENVIRONMENT') is 'production':
-            print("Command not allowed in production!")
-            return
-
         images = Image.objects.all()
         if not images:
             print("No wagtail images found to delete.")

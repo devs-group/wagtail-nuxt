@@ -1,8 +1,8 @@
 {
   "name": "web_frontend",
   "version": "1.0.0",
-  "description": "Web Frontend for COOKIECUTTER_PLACEHOLDER_PROJECTNAME",
-  "author": "devs group",
+  "description": "Web Frontend for PLACEHOLDER_PROJECTNAME",
+  "author": "PLACEHOLDER_AUTHOR",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -32,7 +32,6 @@
     "mobile-detect": "^1.4.4",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.5.0",
     "sass-loader": "^8.0.2",
     "v-body-scroll-lock": "^1.1.3",
     "vue-scrollto": "^2.17.1"

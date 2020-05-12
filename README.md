@@ -7,19 +7,18 @@
         2.  [Backend - Admin](#org211c10f)
         3.  [GraphQL - GraphiQL](#orgc70d5b5)
         4.  [Static Files - MinIO](#org8110bc6)
-        5.  [DB - Pgadmin](#orgfa83a0a)
     2.  [Credentials](#org749259c)
         1.  [DB - Postgre](#orgc6c10a9)
-        2.  [DB - Pgadmin](#orgee65cfb)
-        3.  [Backend - Admin](#orge1ac287)
-        4.  [Static Files - MinIO](#orgc1fcbcb)
+        2.  [Backend - Admin](#orge1ac287)
+        3.  [Static Files - MinIO](#orgc1fcbcb)
+2.  [Branding](#org13fa485)        
 2.  [Deployment](#org177a345)
 3.  [Frontend](#orgc473881)
 4.  [Administration](#orgbf9c4d0)
     1.  [Delete all Wagtail Images](#orgf36cc02)
     2.  [Migrate Changes](#org2525778)
     3.  [Persist Data](#org0ac7a34)
-5.  [Traefik](#org3a8cc49)
+
 
 
 
@@ -70,19 +69,12 @@ the provided APIs, where necessary use [Credentials](#org749259c).
 
 <http:localhost:8000/api/graphiql>
 
-
+nn
 <a id="org8110bc6"></a>
 
 ### Static Files - MinIO
 
 <http:localhost:9000>
-
-
-<a id="orgfa83a0a"></a>
-
-### DB - Pgadmin
-
-<http:localhost:5050>
 
 
 <a id="org749259c"></a>
@@ -126,33 +118,6 @@ Credentials for the dev setup containing only insensitive test data.
 
 
 <a id="orgee65cfb"></a>
-
-### DB - Pgadmin
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">email</td>
-<td class="org-left">info@devs-group.com</td>
-</tr>
-
-
-<tr>
-<td class="org-left">password</td>
-<td class="org-left">root</td>
-</tr>
-</tbody>
-</table>
-
-
-<a id="orge1ac287"></a>
 
 ### Backend - Admin
 
@@ -204,6 +169,13 @@ Credentials for the dev setup containing only insensitive test data.
 </tr>
 </tbody>
 </table>
+
+
+<a id="#org13fa485"></a>
+
+# Branding
+
+Search the project for strings starting with "PLACEHOLDER_" and exchange to enable custom branding of the admin panel and more.
 
 
 <a id="org177a345"></a>
@@ -264,36 +236,3 @@ To load the fixtures us:
 
 
 <a id="org3a8cc49"></a>
-
-# Traefik
-
-Subdomains for the Traefik interface:
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">host</td>
-<td class="org-left">base-wagtail.devs-group.de</td>
-</tr>
-
-
-<tr>
-<td class="org-left">cms-host</td>
-<td class="org-left">cms.base-wagtail.devs-group.de</td>
-</tr>
-
-
-<tr>
-<td class="org-left">frontend</td>
-<td class="org-left">base-wagtail.devs-group.de</td>
-</tr>
-</tbody>
-</table>
-

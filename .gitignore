@@ -6,3 +6,4 @@ cms/media/
 .env
 .vscode/
 .idea/
+**/**/.mypy_cache/

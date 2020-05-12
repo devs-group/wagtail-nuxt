@@ -1,7 +1,6 @@
-
 import logging
 import os
-from time import time, sleep
+from time import sleep, time
 
 import psycopg2
 

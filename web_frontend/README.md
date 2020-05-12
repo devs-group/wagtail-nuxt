@@ -1,6 +1,6 @@
 # web frontend
 
-> Web Frontend for COOKIECUTTER_PLACEHOLDER_PROJECTNAME
+> Web Frontend for PLACEHOLDER_PROJECTNAME
 
 ## Build Setup
   * 

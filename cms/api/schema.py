@@ -1,12 +1,7 @@
 import graphene
 from graphene_django import DjangoObjectType
 
-from home.models import HomePage, InfoCard
-
-
-class HomePageNode(DjangoObjectType):
-    class Meta:
-        model = HomePage
+from .models import InfoCard
 
 
 class InfoCardNode(DjangoObjectType):
@@ -23,13 +18,6 @@ class InfoCardNode(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    # HomePage
-    home_page = graphene.Field(HomePageNode)
-
-    def resolve_home_page(self, info):
-        return HomePage.objects.first()
-
-    # InfoCard
     info_card = graphene.Field(InfoCardNode, id=graphene.Int())
     info_cards = graphene.List(InfoCardNode)
 

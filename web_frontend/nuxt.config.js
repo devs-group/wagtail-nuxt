@@ -9,10 +9,7 @@ export default {
    */
   head() {
     return {
-      title: 'COOKIECUTTER_PLACEHOLDER_PROJECTNAME',
-      htmlAttrs: {
-        lang: this.$i18n.locale || this.$i18n.fallbackLocale
-      },
+      title: 'PLACEHOLDER_PROJECTNAME',
       meta: [
         { charset: 'utf-8' },
         {
@@ -82,39 +79,6 @@ export default {
     // Docs: https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
     ['vue-scrollto/nuxt', { duration: 300 }],
-    [
-      'nuxt-i18n',
-      {
-        locales: [
-          {
-            name: 'German',
-            code: 'de',
-            iso: 'de-DE',
-            file: 'de.js'
-          },
-          {
-            name: 'English',
-            code: 'en',
-            iso: 'en-US',
-            file: 'en.js'
-          }
-        ],
-        defaultLocale: 'en',
-        strategy: 'prefix',
-        rootRedirect: 'en',
-        detectBrowserLanguage: {
-          useCookie: true,
-          cookieKey: 'i18n_redirected',
-          alwaysRedirect: false,
-          fallbackLocale: 'en'
-        },
-        lazy: true,
-        langDir: 'locales/',
-        vueI18n: {
-          fallbackLocale: 'en'
-        }
-      }
-    ]
   ],
   /*
    ** Axios module configuration
