@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 INSTALLED_APPS = [
 
+    'cards',
     'search',
     'api',
-    'dashboard',
 
     'corsheaders',
 
@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cards',
 ]
 
 MIDDLEWARE = [
@@ -103,7 +102,7 @@ GRAPHENE = {
 
 GRAPHQL_API = {
     'APPS': [
-        'home',
+        'cards',
     ]
 }
 

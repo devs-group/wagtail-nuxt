@@ -19,7 +19,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.$t('meta.description')
+          content: 'meta.description'
         }
       ],
       link: [

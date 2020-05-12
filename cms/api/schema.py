@@ -1,7 +1,6 @@
 import graphene
+from cards.models import InfoCard
 from graphene_django import DjangoObjectType
-
-from .models import InfoCard
 
 
 class InfoCardNode(DjangoObjectType):
