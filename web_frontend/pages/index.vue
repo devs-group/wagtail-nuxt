@@ -12,7 +12,6 @@
 
 <script>
 import gql from 'graphql-tag'
-// import InfoCard from '@/components/InfoCard'
 
 export default {
   components: {},
@@ -32,7 +31,6 @@ export default {
       `
     })
     const infoCardData = await infoCardResponse.data
-    console.log(infoCardData)
     return { ...infoCardData }
   }
 }
