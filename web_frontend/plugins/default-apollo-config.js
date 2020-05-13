@@ -8,7 +8,7 @@ export default function(context) {
     url = 'http://localhost:8000/'
   }
 
-  url = url + '/api/graphiql'
+  url = url + 'api/graphiql'
   return {
     httpEndpoint: url
   }
