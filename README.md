@@ -223,7 +223,7 @@ This will execute inside the container the commands `./manage.py makemigrations`
 
 ## Persist Data
 
-To be able to work with data in between container creation and deletion processes fixtures can be created with:
+To be able to work with data from a different docker volume, fixtures can be created with:
 
     make backup
 
