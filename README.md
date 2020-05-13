@@ -35,8 +35,13 @@ Follow these steps to set everything up locally on your machine
 2.  Copy [.env.dist](.env.dist) to .env
     
         cp .env.dist .env
+        
+3.  Install node modules
 
-3.  Start Containers with docker-compose
+        cd web_frontend
+        yarn install
+
+4.  Start Containers with docker-compose
     
         docker-compose up -d
 

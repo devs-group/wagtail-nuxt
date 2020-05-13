@@ -38,4 +38,5 @@ function syncPageTranslationFields () {
 waitForPostgres
 migrateTables
 loadStatics
-gunicorn --bind 0.0.0.0:8000 --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
+createSuperuser $WAGTAIL_ADMIN_USER $WAGTAIL_ADMIN_PASSWORD
+gunicorn --bind 0.0.0.0:8000 --reload --workers 3 --worker-class gevent --access-logfile - cms.wsgi:application
