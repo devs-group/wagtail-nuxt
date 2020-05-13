@@ -12,7 +12,6 @@
         2.  [Backend - Admin](#orge1ac287)
         3.  [Static Files - MinIO](#orgc1fcbcb)
 2.  [Branding](#org13fa485)        
-2.  [Deployment](#org177a345)
 3.  [Frontend](#orgc473881)
 4.  [Administration](#orgbf9c4d0)
     1.  [Delete all Wagtail Images](#orgf36cc02)
@@ -85,7 +84,8 @@ the provided APIs, where necessary use [Credentials](#org749259c).
 
 ## Credentials
 
-Credentials for the dev setup containing only insensitive test data.
+Default Credentials for the dev setup containing only insensitive test data.
+It is advised to change these in the .env.dist and .env files. 
 
 
 <a id="orgc6c10a9"></a>
@@ -136,13 +136,13 @@ Credentials for the dev setup containing only insensitive test data.
 <tbody>
 <tr>
 <td class="org-left">user</td>
-<td class="org-left">Admin</td>
+<td class="org-left">root</td>
 </tr>
 
 
 <tr>
 <td class="org-left">password</td>
-<td class="org-left">Admin123</td>
+<td class="org-left">root</td>
 </tr>
 </tbody>
 </table>
@@ -169,7 +169,7 @@ Credentials for the dev setup containing only insensitive test data.
 
 <tr>
 <td class="org-left">secret-key</td>
-<td class="org-left">root1234</td>
+<td class="org-left">root</td>
 </tr>
 </tbody>
 </table>
@@ -180,13 +180,6 @@ Credentials for the dev setup containing only insensitive test data.
 # Branding
 
 Search the project for strings starting with "PLACEHOLDER_" and exchange to enable custom branding of the admin panel and more.
-
-
-<a id="org177a345"></a>
-
-# Deployment
-
-Details concerning the deployment can be found in its own [README](.deploy/README.md)
 
 
 <a id="orgc473881"></a>
