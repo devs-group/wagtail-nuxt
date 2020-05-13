@@ -1,6 +1,13 @@
-from wagtail.contrib.modeladmin.options import modeladmin_register
+from cards.models import InfoCard
+from wagtail.contrib.modeladmin.options import ModelAdmin, modeladmin_register
 
-from .admin_panel.infocard import InfoCardAdminMenu
+
+class InfoCardAdminMenu(ModelAdmin):
+    model = InfoCard
+    menu_icon = 'form'
+    menu_label = 'Info Card'
+    search_fields = ('title',)
+
 
 # -------------------- Register Buttons in admin panel --------------------
 modeladmin_register(InfoCardAdminMenu)
