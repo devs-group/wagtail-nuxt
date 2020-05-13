@@ -177,7 +177,7 @@ It is advised to change these in the .env.dist and .env files.
 
 <tr>
 <td class="org-left">secret-key</td>
-<td class="org-left">root</td>
+<td class="org-left">rootroot</td>
 </tr>
 </tbody>
 </table>
