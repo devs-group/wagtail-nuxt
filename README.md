@@ -69,7 +69,6 @@ the provided APIs, where necessary use [Credentials](#org749259c).
 
 <http:localhost:8000/api/graphiql>
 
-nn
 <a id="org8110bc6"></a>
 
 ### Static Files - MinIO
