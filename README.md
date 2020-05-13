@@ -1,7 +1,8 @@
 
 # Table of Contents
 
-1.  [Local Setup](#org57856e7)
+1.  [Requirements](#org98at330)
+2.  [Local Setup](#org57856e7)
     1.  [Endpoints](#org809e937)
         1.  [Frontend - Nuxt](#orgc37a804)
         2.  [Backend - Admin](#org211c10f)
@@ -11,14 +12,21 @@
         1.  [DB - Postgre](#orgc6c10a9)
         2.  [Backend - Admin](#orge1ac287)
         3.  [Static Files - MinIO](#orgc1fcbcb)
-2.  [Branding](#org13fa485)        
-3.  [Frontend](#orgc473881)
-4.  [Administration](#orgbf9c4d0)
+3.  [Branding](#org13fa485)        
+4.  [Frontend](#orgc473881)
+5.  [Administration](#orgbf9c4d0)
     1.  [Delete all Wagtail Images](#orgf36cc02)
     2.  [Migrate Changes](#org2525778)
     3.  [Persist Data](#org0ac7a34)
 
 
+
+
+<a id="org98at330"></a>
+
+# Requirements
+
+You need to have [docker](https://docs.docker.com/get-docker/) and preferely docker-compose installed on your system.
 
 
 <a id="org57856e7"></a>
@@ -175,7 +183,7 @@ It is advised to change these in the .env.dist and .env files.
 </table>
 
 
-<a id="#org13fa485"></a>
+<a id="org13fa485"></a>
 
 # Branding
 
