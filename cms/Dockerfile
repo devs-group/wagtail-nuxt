@@ -1,5 +1,6 @@
 FROM python:3.7
-LABEL maintainer="PLACEHOLDER@E.MAIL"
+# LABEL maintainer="PLACEHOLDER@E.MAIL"
+LABEL maintainer="vincent@devs-group.com"
 
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_ENV dev
